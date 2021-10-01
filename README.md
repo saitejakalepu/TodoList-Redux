@@ -1,6 +1,6 @@
 # To-Do-App-in-React with Redux & Local Storage
 
-## What does this web app do ?
+### What does this web app do ?
 
 <li>Add Todo</li>
 <li>Edit & update Todo</li>
