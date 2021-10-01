@@ -1,4 +1,4 @@
-# To-Do-App-in-React
+# To-Do-App-in-React with Redux & Local Storage
 
 ## What does this web app do ?
 
@@ -7,6 +7,7 @@
 <li> Delete Todo</li>
 <li>Remeber Todo</li>
 <li>Search Todo</li>
+<li>Complete Todo</li>
 
 ## Published at https://saitejakalepu.github.io/TodoList-Redux/
 
