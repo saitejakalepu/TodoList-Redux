@@ -40,6 +40,14 @@ export const disable=(toggle)=>{
   }
 }
 
+export const isCompleted=(check)=>{
+  return{
+    type : "SET_COMPLETE",
+    payload : check
+  }
+}
+
+
 
 
 

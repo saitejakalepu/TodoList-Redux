@@ -1,4 +1,4 @@
-.list {
+/* .list {
   color: #fff;
   width: 300px;
   margin: 20px auto;
@@ -22,6 +22,75 @@
 .list p input:focus {
   outline: none;
 }
+.list p span {
+  position: absolute;
+  right: 10px;
+}
+.fadelete {
+  margin: 5px 5px;
+  margin-top: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  color: black;
+}
+.fadelete:hover {
+  color: white;
+}
+
+.faedit {
+  margin-left: 20px;
+  margin-top: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  color: black;
+}
+.faedit:hover {
+  color: white;
+} */
+
+.todo {
+  margin: 20px auto;
+  width: 400px;
+  height: 60px;
+}
+
+.checkbox {
+  width: 18px;
+  height: 18px;
+  position: relative;
+  margin-top: 20px;
+  margin-left: 20px;
+  float: left;
+}
+
+.list {
+  color: #fff;
+  width: 300px;
+  margin: 20px auto;
+  height: 60px;
+  /* background-color: #8566aa; */
+  /* background-color: green; */
+  border-radius: 15px;
+}
+
+.list p {
+  padding: 10px;
+  position: relative;
+  transition: ease-in-out;
+}
+
+.list p input {
+  background-color: transparent;
+  border: none;
+  margin-left: 0px;
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+}
+.list p input:focus {
+  outline: none;
+}
+
 .list p span {
   position: absolute;
   right: 10px;

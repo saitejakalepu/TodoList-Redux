@@ -13,7 +13,6 @@ const initialState =
     currentItem:{
         text:'',
         key:'',
-        isDisabled : null
       },
     query : ""
 }
@@ -22,7 +21,7 @@ export const reducer=(state=initialState, {type,payload})=>{
 switch(type)
 {
     case "SET_INPUT":
-    return {...state, currentItem : { text : payload , key : Date.now() , isDisabled : true}};
+    return {...state, currentItem : { text : payload , key : Date.now() , isDisabled : true , completed : false}};
 
     case "ADD_TODO" :
     if(payload.text!=="" && payload.text.trim()!=="")
@@ -65,6 +64,18 @@ switch(type)
 
     case "SET_QUERY":
     return {...state, query: payload}
+
+    case "SET_COMPLETE" :
+      state.itemsList.map((item) => 
+            {  
+               if(item.key===payload.key)
+               {
+                item.isCompleted = payload.toggle
+               } 
+             }
+             )
+      localStorage.setItem("todoList", JSON.stringify([...state.itemsList]))
+      return {...state, itemsList :  [...state.itemsList]}
 
     default:
     return state

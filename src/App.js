@@ -34,7 +34,7 @@ console.log(disabledButton);
       <button 
       disabled={disabledButton}
       onClick={()=>{
-        dispatch(addTodo({text : currentItem.text, key : currentItem.key, isDisabled : currentItem.isDisabled}));
+        dispatch(addTodo({text : currentItem.text, key : currentItem.key, isDisabled : currentItem.isDisabled , isCompleted : currentItem.completed}));
         dispatch(setInput(""))}
         }>+</button>
       

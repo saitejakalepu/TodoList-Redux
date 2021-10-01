@@ -1,6 +1,6 @@
 
 import { useDispatch , useSelector} from 'react-redux';
-import {deleteTodo, updateTodo , disable , editTodo} from '../redux/action'
+import {deleteTodo, updateTodo , disable , editTodo , isCompleted} from '../redux/action'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEdit, faTrash,faCheck} from '@fortawesome/free-solid-svg-icons';
 import './Todo.css';
@@ -14,9 +14,19 @@ function Todo(){
     
     const filteredItems = items.filter(item =>item.text.includes(searchText));
     const listItems = filteredItems.map(item =>{
-    return <div className="list" key={item.key}>
-     <p>
-         <input 
+      return<div className="todo" id={item.key}>
+        <input 
+        className="checkbox" 
+        type="checkbox" 
+        checked={item.isCompleted}  
+        onClick={(e)=>dispatch(isCompleted({toggle: !item.isCompleted , key : item.key}))}
+        />
+        <div 
+        className="list"
+        style={item.isCompleted ? {backgroundColor : "#0cf714"} : {backgroundColor : "#8566aa"}}
+        >
+        <p>
+        <input 
          type="text" 
          id={item.key} 
          Value ={item.text} 
@@ -24,7 +34,7 @@ function Todo(){
          onChange={(e)=>dispatch(editTodo(e.target.value))}
          />
          
-         {item.isDisabled &&
+        {item.isDisabled &&
         <span1>
         <FontAwesomeIcon 
         className="faedit"  
@@ -51,8 +61,9 @@ function Todo(){
         <span> 
         <FontAwesomeIcon className="fadelete" onClick={()=>dispatch(deleteTodo(item.key))} icon={faTrash} />
         </span>
-     </p>
-    </div>
+        </p>
+        </div>
+        </div>
     }
     )
 
