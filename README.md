@@ -5,14 +5,14 @@
 <li>Add Todo</li>
 <li>Edit & update Todo</li>
 <li> Delete Todo</li>
-<li>Remeber Todo</li>
+<li>Remember Todo</li>
 <li>Search Todo</li>
 <li>Complete Todo</li>
 
-## Published at https://saitejakalepu.github.io/TodoList-Redux/
+### Published at https://saitejakalepu.github.io/TodoList-Redux/
 
 
-## Techonologies used
+### Techonologies used
 
 <li>React</li>
 <li>Redux</li>
