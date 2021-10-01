@@ -1,10 +1,21 @@
-# Getting Started with Create React App
+## To-Do-App-in-React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# What does this web app do ?
 
-## Available Scripts
+<li>Add Todo</li>
+<li>Edit & update Todo</li>
+<li> Delete Todo</li>
+<li>Remeber Todo</li>
+<li>Search Todo</li>
 
-In the project directory, you can run:
+# Published at https://saitejakalepu.github.io/TodoList-Redux/
+
+
+# Techonologies used
+
+<li>React</li>
+<li>Redux</li>
+<li>Local Storage</li>
 
 ### `npm start`
 
