@@ -1,23 +1,45 @@
-import logo from './logo.svg';
+import './App.css';
+import { useDispatch , useSelector} from 'react-redux';
+import Todo from './components/Todo';
+import {addTodo,setInput} from './redux/action';
 import './App.css';
 
+
 function App() {
+
+const dispatch = useDispatch();
+const currentItem = useSelector(state=> state.currentItem);
+var disabledButton = true;
+if(currentItem.text ==="" && currentItem.text.trim()==="") disabledButton = true;
+else  disabledButton =false;
+
+console.log(currentItem.text)
+console.log(disabledButton);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <header>
+          
+        <br />
+        <h1>TODO List</h1><br />
+      <input 
+      type="text" 
+      placeholder="Enter / Search" 
+      value={currentItem.text}
+      onChange={(e)=>
+        {e.target.value.length>-1 && 
+         dispatch(setInput(e.target.value))
+        }
+      }>
+      </input>
+      <button 
+      disabled={disabledButton}
+      onClick={()=>{
+        dispatch(addTodo({text : currentItem.text, key : currentItem.key, isDisabled : currentItem.isDisabled}));
+        dispatch(setInput(""))}
+        }>+</button>
+      
+     <Todo/>
+     </header>
     </div>
   );
 }
