@@ -1,13 +1,13 @@
 # To-Do-App-in-React with Redux & Local Storage
 
-### What does this web app do ?
+### Features?
 
 <li>Add Todo</li>
 <li>Edit & update Todo</li>
 <li> Delete Todo</li>
 <li>Remember Todo</li>
 <li>Search Todo</li>
-<li>Complete Todo</li>
+<li>Mark Completed Todo</li>
 
 ### Published at https://saitejakalepu.github.io/TodoList-Redux/
 
