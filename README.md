@@ -9,6 +9,7 @@
 <li>Search(filter) Todo</li>
 <li>Check individual Todo when Completed</li>
 <li>Remember Todo</li>
+<li>Strict input validation</li>
 
 ### Published at https://saitejakalepu.github.io/TodoList-Redux/
 
