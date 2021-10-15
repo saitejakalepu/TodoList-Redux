@@ -1,6 +1,6 @@
 # To-Do-App-in-React with Redux & Local Storage
 
-### Features?
+### Features :
 
 <li>Add Todo</li>
 <li>Edit & update Todo</li>
